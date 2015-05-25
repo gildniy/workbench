@@ -1,8 +1,8 @@
-<?php namespace Illuminate\Workbench\Console;
+<?php namespace Xtwoend\Workbench\Console;
 
-use Illuminate\Console\Command;
-use Illuminate\Workbench\Package;
-use Illuminate\Workbench\PackageCreator;
+use Xtwoend\Console\Command;
+use Xtwoend\Workbench\Package;
+use Xtwoend\Workbench\PackageCreator;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
@@ -25,14 +25,14 @@ class WorkbenchMakeCommand extends Command {
 	/**
 	 * The package creator instance.
 	 *
-	 * @var \Illuminate\Workbench\PackageCreator
+	 * @var \Xtwoend\Workbench\PackageCreator
 	 */
 	protected $creator;
 
 	/**
 	 * Create a new make workbench command instance.
 	 *
-	 * @param  \Illuminate\Workbench\PackageCreator  $creator
+	 * @param  \Xtwoend\Workbench\PackageCreator  $creator
 	 * @return void
 	 */
 	public function __construct(PackageCreator $creator)
@@ -59,7 +59,7 @@ class WorkbenchMakeCommand extends Command {
 	/**
 	 * Run the package creator class for a given Package.
 	 *
-	 * @param  \Illuminate\Workbench\Package  $package
+	 * @param  \Xtwoend\Workbench\Package  $package
 	 * @return string
 	 */
 	protected function runCreator($package)
@@ -87,7 +87,7 @@ class WorkbenchMakeCommand extends Command {
 	/**
 	 * Build the package details from user input.
 	 *
-	 * @return \Illuminate\Workbench\Package
+	 * @return \Xtwoend\Workbench\Package
 	 *
 	 * @throws \UnexpectedValueException
 	 */

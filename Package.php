@@ -1,4 +1,4 @@
-<?php namespace Illuminate\Workbench;
+<?php namespace Xtwoend\Workbench;
 
 class Package {
 

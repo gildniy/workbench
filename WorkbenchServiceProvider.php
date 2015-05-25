@@ -1,7 +1,7 @@
-<?php namespace Illuminate\Workbench;
+<?php namespace Xtwoend\Workbench;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Workbench\Console\WorkbenchMakeCommand;
+use Xtwoend\Workbench\Console\WorkbenchMakeCommand;
 
 class WorkbenchServiceProvider extends ServiceProvider {
 

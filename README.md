@@ -1,4 +1,4 @@
-# Laravel 5 Workbench
+# Laravel 5.1 Workbench
 
 ### Installation
 
@@ -33,7 +33,7 @@ You can autoload the workbench by adding this following command to your `bootstr
 */
 if (is_dir($workbench = __DIR__.'/../workbench'))
 {
-	Pingpong\Workbench\Starter::start($workbench);
+	Xtwoend\Workbench\Starter::start($workbench);
 }
 ```
 
