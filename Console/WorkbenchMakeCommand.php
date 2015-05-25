@@ -1,6 +1,6 @@
 <?php namespace Xtwoend\Workbench\Console;
 
-use Xtwoend\Console\Command;
+use Illuminate\Console\Command;
 use Xtwoend\Workbench\Package;
 use Xtwoend\Workbench\PackageCreator;
 use Symfony\Component\Console\Input\InputOption;
