@@ -15,9 +15,9 @@
         "classmap": [
             "src/migrations"
         ],
-        "psr-0": {
+        "psr-4": {
             "{{vendor}}\\{{name}}\\": "src/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "dev"
 }
