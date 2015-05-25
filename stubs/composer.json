@@ -9,14 +9,14 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "5.0.*"
+        "illuminate/support": "5.1.*"
     },
     "autoload": {
         "classmap": [
             "src/migrations"
         ],
         "psr-4": {
-            "{{vendor}}\\{{name}}\\": "src/"
+            "{{vendor}}\\{{name}}\\": "src/{{vendor}}/{{name}}"
         }
     },
     "minimum-stability": "dev"

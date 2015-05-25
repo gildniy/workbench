@@ -30,6 +30,7 @@ class PackageCreator {
 	protected $blocks = array(
 		'SupportFiles',
 		'SupportDirectories',
+		'ComponentDirectories',
 		'PublicDirectory',
 		'TestDirectory',
 		'ServiceProvider',
@@ -188,11 +189,31 @@ class PackageCreator {
 	 */
 	public function writeSupportDirectories(Package $package, $directory)
 	{
-		foreach (array('config', 'controllers', 'lang', 'migrations', 'views') as $support)
+		foreach (array('config', 'migrations', 'resources') as $support)
 		{
 			$this->writeSupportDirectory($package, $support, $directory);
 		}
 	}
+
+	/**
+	 * Create the support directories for a package.
+	 *
+	 * @param  \Illuminate\Workbench\Package  $package
+	 * @param  string  $directory
+	 * @return void
+	 */
+	public function writeComponentDirectories(Package $package, $directory)
+	{
+		foreach (array('Repositories', 'Entities', 'Jobs', 'Exceptions', 'Http') as $component)
+		{
+			$path = $directory.'/src/'.$package->vendor.'/'.$package->name.'/'.$component;
+
+			$this->files->makeDirectory($path, 0777, true);
+
+			$this->files->put($path.'/.gitkeep', '');
+		}
+	}
+
 
 	/**
 	 * Write a specific support directory for the package.
